@@ -22,9 +22,10 @@ SECRET_KEY = '0iogs%3)8^f2%n$3j7=o49+#@cp1ed8t#ceyf-hmdc9klc3rr+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DIRS = (
-    '/encuestas/templates', # Cambiar esto al directorio que corresponda.
-)
+TEMPLATE_DIRS = [
+    os.path.join(os.path.dirname(__file__) , 'templates').replace('\\','/')
+]
+
 
 TEMPLATE_DEBUG = True
 
